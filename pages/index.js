@@ -1,31 +1,36 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import srcImage from '../public/Chapter3.jpeg';
+import Head from 'next/head';
+import React, { useState } from 'react';
+
+export default function Home() {
+
+  // Globally Scoped count value.
+  const [StorageCount, setCount] = useState(0);
+  
+  function countUp( ) {
+
+    window.localStorage.setItem('count', JSON.stringify(StorageCount));
+
+    setCount(StorageCount + 1)
+
+    let getCount = window.localStorage.getItem('count'); 
+
+    console.log(getCount + " This is local Storage Count")
 
 
-export default function Home( {props} ) {
+  }
 
-  let name = "Yolo";
-  let _A = "'"
-  let mainTitle = "Yolos Fortnite Tracking";
+  
+
   return (
     <div>
       <Head>
-        <title>Yolos Fortnite Blog</title>
+        <title>Event Handlers</title>
       </Head>
 
-      <div className={styles.HeaderDiv}>
-        <h1 className={styles.HeaderName}>{mainTitle} 
-          <a>Stats</a>
-        </h1>
-        <h3 className={styles.HeaderName}>Chapter 3 Season 1</h3>
-      </div>
+      <p value="countState">{StorageCount}</p>
+      <button onClick={countUp}>Up</button>
+      
 
-
-      <body>
-        <iframe width="1442" height="690" src="https://www.youtube.com/embed/knAYcg7Tt8E" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
-      </body>
     </div>
   )
 }
