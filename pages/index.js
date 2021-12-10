@@ -3,34 +3,37 @@ import React, { useState } from 'react';
 
 export default function Home() {
 
-  // Globally Scoped count value.
-  const [StorageCount, setCount] = useState(0);
-  
-  function countUp( ) {
+    // Declare a new state variable, which we'll call "count"
+    const [count, setCount] = useState(0);
+    console.log(count)
 
-    window.localStorage.setItem('count', JSON.stringify(StorageCount));
+    function clickCounter() {
+      setCount(count + 1)
 
-    setCount(StorageCount + 1)
-
-    let getCount = window.localStorage.getItem('count'); 
-
-    console.log(getCount + " This is local Storage Count")
-
-
-  }
-
-  
-
-  return (
-    <div>
-      <Head>
-        <title>Event Handlers</title>
-      </Head>
-
-      <p value="countState">{StorageCount}</p>
-      <button onClick={countUp}>Up</button>
+      window.localStorage.setItem('count', JSON.stringify(count + 1));
       
+    }
 
-    </div>
-  )
+    function setScore() {
+      let storageCount = window.localStorage.getItem('count', JSON.stringify())
+      console.log(storageCount + "This is storage Count")
+      setCount(storageCount);
+    }
+
+
+    
+    
+
+  
+    return (
+      <div>
+        <p>You clicked {count} times</p>
+        <button onClick={clickCounter}>
+          Click me
+        </button>
+        <button onClick={setScore}>
+          Click me for score
+        </button>
+      </div>
+    );
 }
