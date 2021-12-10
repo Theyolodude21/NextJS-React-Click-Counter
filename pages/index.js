@@ -1,39 +1,30 @@
-import Head from 'next/head';
-import React, { useState } from 'react';
+import Head from "next/head";
+import styles from '../styles/Home.module.css'
+
 
 export default function Home() {
 
-    // Declare a new state variable, which we'll call "count"
-    const [count, setCount] = useState(0);
-    console.log(count)
+  return (
+    <div>
+      <Head>
+        <title>Click Counters</title>
+      </Head>
 
-    function clickCounter() {
-      setCount(count + 1)
-
-      window.localStorage.setItem('count', JSON.stringify(count + 1));
-      
-    }
-
-    function setScore() {
-      let storageCount = window.localStorage.getItem('count', JSON.stringify())
-      console.log(storageCount + "This is storage Count")
-      setCount(storageCount);
-    }
+      <h1 className={styles.Header}>Counters</h1>
+      <h1 className={styles.Header}>____________________________________________________________________________</h1>
 
 
-    
-    
+      <div className={styles.CenterText}>
 
-  
-    return (
-      <div>
-        <p>You clicked {count} times</p>
-        <button onClick={clickCounter}>
-          Click me
-        </button>
-        <button onClick={setScore}>
-          Click me for score
-        </button>
       </div>
-    );
+
+      <div className={styles.LeftText}>
+
+      </div>
+
+      <div className={styles.RightText}>
+
+      </div>
+    </div>
+  )
 }

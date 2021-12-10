@@ -1,0 +1,54 @@
+.Header {
+  justify-content: center;
+  display: flex;
+}
+
+.CenterText {
+  justify-content: center;
+  display: flex;
+
+  border: 3px solid black;
+  background-color: grey;
+  color: grey;
+
+  height: 80vh;
+  width: 60vw;
+  margin: auto;
+}
+
+.LeftText {
+  justify-content: center;
+  display: flex;
+
+  position: absolute;
+
+  border: 3px solid rgb(0, 0, 0);
+  background-color: rgb(77, 75, 75);
+
+
+  height: 80vh;
+  width: 17vw;
+  margin: auto;
+
+  left: 1vw;
+  top: 18vh;
+}
+
+.RightText {
+  justify-content: center;
+  display: flex;
+
+  position: absolute;
+
+  border: 3px solid rgb(0, 0, 0);
+  background-color: rgb(77, 75, 75);
+
+
+  height: 80vh;
+  width: 17vw;
+  margin: auto;
+
+  left: 145vh;
+  top: 18vh;  
+  
+}
