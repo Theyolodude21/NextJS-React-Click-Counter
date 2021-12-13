@@ -1,54 +1,86 @@
+.Global {
+  background-image: url('../public/Background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-position-y: -22vh;
+}
+
 .Header {
   justify-content: center;
   display: flex;
 }
 
-.CenterText {
+.CounterTitles {
+  display: grid;
   justify-content: center;
-  display: flex;
+  align-items: center;
+  grid-gap: 10vh;
 
-  border: 3px solid black;
-  background-color: grey;
-  color: grey;
+  grid-template-rows: 10vh;
+  grid-template-columns: 10vh 10vh 10vh;
 
-  height: 80vh;
-  width: 60vw;
-  margin: auto;
+  text-align: center;
+  font-size: 18px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
-.LeftText {
-  justify-content: center;
-  display: flex;
-
-  position: absolute;
-
-  border: 3px solid rgb(0, 0, 0);
-  background-color: rgb(77, 75, 75);
-
-
-  height: 80vh;
-  width: 17vw;
-  margin: auto;
-
-  left: 1vw;
-  top: 18vh;
+.CounterButtons {
+  border-radius: 20px;
+  border: 2px solid #0400ff;
+  padding: 5px;
+  background: transparent;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
 }
 
-.RightText {
+.CounterButtons:hover {
+  border-radius: 20px;
+  border: 2px solid #1900ff;
+  padding: 5px;
+  background-color: rgb(46, 45, 45);
+  cursor: pointer;
+}
+
+
+.Counters {
+
+  grid-template-rows: 10vh 10vh 10vh;
+  grid-template-columns: 10vh 10vh 10vh;
+  grid-gap: 10vh;
+
+  display: grid;
   justify-content: center;
-  display: flex;
+  align-items: center;
 
-  position: absolute;
-
-  border: 3px solid rgb(0, 0, 0);
-  background-color: rgb(77, 75, 75);
-
-
-  height: 80vh;
-  width: 17vw;
-  margin: auto;
-
-  left: 145vh;
-  top: 18vh;  
   
+}
+
+.CountersContent {
+
+  text-align: center;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px;
+
+  padding: 5px;
+
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.MainFooterParent {
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: rgb(225, 218, 218);
+  opacity: 90%;
+}
+
+.MainFooterChild {
+  text-align: center;
 }
