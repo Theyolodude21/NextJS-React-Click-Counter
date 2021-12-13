@@ -43,10 +43,12 @@ export default function Home() {
       <br></br>
       <br></br>
       <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       
-      <div className={styles.CounterTitles}>
 
-      </div>
       
       <div className={styles.Counters}>
         <div className={styles.CountersContent}>

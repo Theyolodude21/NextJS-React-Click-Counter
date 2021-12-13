@@ -10,19 +10,6 @@
   display: flex;
 }
 
-.CounterTitles {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-gap: 10vh;
-
-  grid-template-rows: 10vh;
-  grid-template-columns: 10vh 10vh 10vh;
-
-  text-align: center;
-  font-size: 18px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-}
 
 .CounterButtons {
   border-radius: 20px;
@@ -41,34 +28,27 @@
   cursor: pointer;
 }
 
-
 .Counters {
-
-  grid-template-rows: 10vh 10vh 10vh;
-  grid-template-columns: 10vh 10vh 10vh;
-  grid-gap: 10vh;
-
   display: grid;
   justify-content: center;
   align-items: center;
 
-  
+  grid-template-rows: 10vh 10vh 10vh;
+  grid-template-columns: 10vh 10vh 10vh;
+  grid-gap: 10vh;
 }
 
 .CountersContent {
-
   text-align: center;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
   display: grid;
   justify-content: center;
   align-items: center;
 
   border-radius: 20px;
-
   padding: 5px;
-
-  font-size: 30px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .MainFooterParent {
